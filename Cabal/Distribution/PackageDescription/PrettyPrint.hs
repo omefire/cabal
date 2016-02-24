@@ -38,7 +38,7 @@ import Distribution.Text
 
 import Text.PrettyPrint
        (hsep, space, parens, char, nest, isEmpty, ($$), (<+>),
-        colon, text, vcat, ($+$), Doc, render)
+        colon, text, vcat, ($+$), Doc)
 
 import qualified Data.ByteString.Lazy.Char8 as BS.Char8
 
