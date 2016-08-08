@@ -351,10 +351,10 @@ $ cabal --ignore-sandbox install text
 
 ## Displaying cabal environment information ##
 
-A cabal environment (the directory containing a package) has a certain state.
-One example are the flags of the last (successful) configuration. The
-`cabal status` command will print a summary over several
-aspects of the environment, such as
+A cabal environment (the directory containing a package) has a certain
+state.  One example are the flags of the last (successful)
+configuration. The `cabal status` command will print a summary over
+several aspects of the environment, such as
 
 * the cabal version;
 
@@ -375,6 +375,26 @@ $ cabal status --compiler
 Configured compiler:
   ghc-7.10.3
 ~~~~~~~~~~~~~~~
+
+Full list of options supported by `cabal status`:
+
+*    `--version`     -- Print the version of this program.
+*    `--versions`    -- List the versions of all known/related programs
+                     (e.g. `ghc` and `ghc-pkg`).
+*    `--compiler`    -- Print the currently configured compiler info.
+*    `--package`     -- Print information about the package in the current directory.
+*    `--plan`        -- List all packages in the install plan for the current
+                     package. Implies `--package`.
+*    `--sandbox`     -- Print information about the currently configured sandbox
+                     (if any).
+*    `--databases`   -- List all packages in the global, local and sandbox
+                     package databases
+*    `--check`       -- Check package databases for consistency.
+*    `--all`         -- Include all the above information.
+
+Please note that the output of `cabal status` is not intended to be
+machine parseable and should not be expected to be stable across
+versions.
 
 ## Creating a binary package ##
 
