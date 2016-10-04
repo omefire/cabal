@@ -277,7 +277,7 @@ mainWorker args = topHandler $
       , hiddenCmd  upgradeCommand upgradeAction
       , hiddenCmd  win32SelfUpgradeCommand win32SelfUpgradeAction
       , hiddenCmd  actAsSetupCommand actAsSetupAction
-      , hiddenCmd  manpageCommand (manpageAction commandSpecs)
+      , hiddenCmd  manpageCommand (manpageAction commandSpecs) 
 
       , regularCmd  CmdConfigure.configureCommand CmdConfigure.configureAction
       , regularCmd  CmdBuild.buildCommand         CmdBuild.buildAction
